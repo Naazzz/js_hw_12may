@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <style>
+  /*body{
+    display: flex;
+
+    }
+*/
+    </style>
+</head>
+<body>
+<script>
+// Sual 01 -Aşağıdakı kodun netice nedir ve sebebini izah edin.
+
+/*
+  var y = 1;
+  if (function f(){}) {
+    y += typeof f;
+  }
+  console.log(y);
+
+  kodun neticesinden ashagidakilari beyan etmek olar: 
+  1. if statement'in icinde empty function verende true qiymeti qaytarilir.
+  2. 1ci halda biz function'i declare etmish olmuruq. bu sebeb gore kodun neticesi "1undefined"  olur.
+  */
+
+
+// Sual 02 - Aşağıdakı massivin icini nece usulla bosaldmaq olar izah edin.
+
+/*
+   var myArr =  ['a','b','c','d','e','f'];
+
+   myArr = new Array();
+
+   myArr= null;
+
+  var size=myArr.length;
+   for(var i=0;i<size;i++){
+    myArr.pop();
+   }
+
+   myArr=[];
+
+
+   console.log(myArr);
+   */
+
+
+// Sual 03 - Aşağıdakı verilen kodların neticeleri ve sebeblerini izah edin.
+/*
+
+  var bar = true;
+	console.log(bar + 0);   
+	console.log(bar + "xyz");  
+	console.log(bar + true);  
+	console.log(bar + false);
+
+true value as boolean expression, has 1 value, false has 0 value. thats why  addition of true and 0 seems addition of 1 and 0. so, final result is 1+0=1.  in the second example, + sign just stick the 2 value, =truexyz. rest of them is same as first one. true+true=1+1=2. true+false=1+0=1.*/
+// Sual 04 - Asagıdakı kodun neticesi nedir ve sebebini izah edin.
+ 
+ /*var salary = "1000$";
+
+ (function () {
+     console.log("Original salary was " + salary);
+
+     var salary = "5000$";
+
+     console.log("My New Salary " + salary);
+ })();
+  function in icinde salary soradan declare olunub deye 1ci console.log u ekrana cixara bilmir. lakin 2ci console.logda artiq var deyishkeni var deye cixarir.*/
+
+ // Sual 05 - 
+
+ /* Verilenler
+
+ 	var size=[[width],[height]];
+    var color=[];
+
+    ----Bu verilenlere gore istifadeci terefinden girilen reqeme esasen divler yaranacaq ekranda ve bu divler 4 sütün seklinde ekranda gorunecek.Ekrandakı divlerin her setirde 3.cu yerde duran div border:2px solid red  xususiyyetine sahib olacaq.(bu meselen constructor function istifade olunaraq yazılacaq.)
+
+*/
+
+    var size=[[100,100, 100,100,100,100, 100,100],
+    [200, 200,200,200,200, 200,200,200]];
+    var color=["blue", "pink","green", "orange","yellow", "gray","black", "brown"];
+    var myDiv=function(width,height,color){
+      this.width=width,
+      this.height=height,
+      this.color=color,
+
+      this.createDiv=function(){
+        document.write("<div style='width:"+width+"px;height:"+height+"px; background-color:"+color+";margin:5px; display:inline-block;'></div>");
+      }
+      this.condition=function(){
+        document.write("<div style='width:"+width+"px;height:"+height+"px; background-color:"+color+";margin:5px; border:2px solid red;display:inline-block;'></div>");
+      }
+
+    }
+    for(var i=0;i<8;i++)
+    {
+      var Ndiv=new myDiv(size[0][i], size[1][i],color[i]);
+      if(i==2 || i==6)
+        Ndiv.condition();
+        else
+        {
+        Ndiv.createDiv();
+      }
+      if((i+1)%4==0 && i>0 )
+        document.write("<br>");
+
+    }
+      
+
+
+
+</script>
+
+
+</body>
+</html>
